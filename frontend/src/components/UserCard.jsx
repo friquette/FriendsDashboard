@@ -47,7 +47,7 @@ const UserCard = ({ user, setUsers }) => {
                 </Flex>
 
                 <Flex>
-                    <EditModal />
+                    <EditModal setUsers={setUsers} user={user} />
                     <IconButton
                         variant='ghost'
                         colorScheme='red'
