@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Flex, Grid, Spinner, Text } from "@chakra-ui/react"
 
 import UserCard from './UserCard'
+import { BASE_URL } from '../App'
 
 const UserGrid = ({users, setUsers}) => {
     const [isLoading, setIsLoading] = useState(true);
@@ -35,7 +36,7 @@ const UserGrid = ({users, setUsers}) => {
                 gap={"4"}
             >
                 {users.map((user) => (
-                    <UserCard key={user.id} user={user} />
+                    <UserCard key={user.id} user={user} setUsers={setUsers} />
                 ))}
             </Grid>
 
