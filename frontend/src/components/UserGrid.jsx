@@ -8,7 +8,7 @@ const UserGrid = ({users, setUsers}) => {
     useEffect(() => {
         const getUsers = async () => {
             try {
-                const res = await fetch("http://127.0.0.1:5000/api/friends")
+                const res = await fetch(BASE_URL + "/friends")
                 const data = await res.json()
 
                 if (!res.ok) {

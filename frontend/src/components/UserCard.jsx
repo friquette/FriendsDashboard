@@ -9,7 +9,7 @@ const UserCard = ({ user }) => {
         <CardHeader>
             <Flex gap={"4"}>
                 <Flex flex={"1"} gap={"4"} alignItems={"center"}>
-                    <Avatar src={`https://api.multiavatar.com/${user.name}.png`} />
+                    <Avatar src={user.imgUrl} />
                     <Box>
                         <Heading size='sm'>{user.name}</Heading>
                         <Text>{user.role}</Text>
