@@ -55,6 +55,13 @@ const CreateUserModal = ({setUsers}) => {
             });
             onClose();
             setUsers((prevUsers) => [...prevUsers, data]);
+
+            setInputs({
+                name: "",
+                role: "",
+                description: "",
+                gender: ""
+            })
         } catch (error) {
             toast({
                 status: "error",
@@ -65,12 +72,6 @@ const CreateUserModal = ({setUsers}) => {
             });
         } finally {
             setIsLoading(false);
-            setInputs({
-                name: "",
-                role: "",
-                description: "",
-                gender: ""
-            })
         }
     }
 
